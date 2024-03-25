@@ -4,10 +4,10 @@ import Footer from "./Footer";
 
 const FrontendLayout = (props) => {
     return (
-        <div>
+        <div className="relative">
             <Header/>
-                {/* {props.children}
-            <Footer/> */}
+                {props.children}
+            {/* <Footer/> */}
         </div>
     )
 }
