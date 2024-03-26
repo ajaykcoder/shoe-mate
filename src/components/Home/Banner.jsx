@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
     return (
-        <div className="w-full py-6 px-5 bg-gradient-to-r to-primary from-secondary h-lvh flex items-center">
+        <div className="w-full px-5 bg-gradient-to-r to-primary from-secondary h-lvh flex items-center">
             <div className="w-[1440px] max-w-full mx-auto flex items-center gap-x-6">
                 <div className="flex-1 flex flex-col justify-center">
                     <h1 className="text-white">
