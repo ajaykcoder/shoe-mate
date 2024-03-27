@@ -12,7 +12,8 @@ module.exports = {
             "lightBlack" : "#0E172A",
             "text" : "#334155",
             "white" : "#FFFFFF",
-            "border" : "#C6C6C6"
+            "border" : "#C6C6C6",
+            "borderLight" : "#ECEEEF"
         },
         extend: {},
     },

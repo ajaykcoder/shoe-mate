@@ -9,22 +9,22 @@ const Products = () => {
                 <div className="text-primary text-2xl font-semibold text-center mb-10">Products</div>
                 <div className="flex flex-wrap gap-10">
                     {product && product.length > 0 && product.map((product) => (
-                        <div key={product.id} className="w-[calc(25%-30px)]">
+                        <div key={product.id} className="group/card w-[calc(25%-30px)]">
                             <div className="relative">
                                 <img className="flex w-full" src={product.images[0].picture} alt={product.name}/>
                                 {product.images && product.images.length > 0 && (
                                     <div className="flex flex-wrap gap-1 justify-center absolute bottom-3 left-0 right-0">
                                         {product.images.map((image,index) => (
-                                            <button key={index} className="cursor-pointer rounded-md overflow-hidden border border-border hover:border-secondary">
+                                            <button key={index} className="group/variant invisible group-hover/card:visible cursor-pointer rounded-md overflow-hidden border border-border hover:border-secondary">
                                                 <img className="flex w-10 h-10 object-cover" src={image.picture} alt={product.name}/>
                                             </button>
                                         ))}
                                     </div>
                                 )}
                             </div>
-                            <div className=" p-5">
+                            <div className="p-5 border-x border-b border-borderLight">
                                 <div>
-                                    <div className="text-base text-nowrap text-ellipsis overflow-hidden">{product.name}</div>
+                                    <div className="text-base text-nowrap text-ellipsis overflow-hidden cursor-pointer">{product.name}</div>
                                     <div>₹{product.price}</div>
                                     <div className="flex items-center justify-between gap-x-2">
                                         <button className="text-base font-medium bg-primary hover:bg-secondary text-white h-10 px-4 rounded-md flex items-center justify-center w-max cursor-pointer transition duration-[.2s] mt-3">Add to Cart</button>
