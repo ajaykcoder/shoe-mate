@@ -11,7 +11,7 @@ const Products = () => {
                     {product && product.length > 0 && product.map((product) => (
                         <div key={product.id} className="group/card w-[calc(25%-30px)]">
                             <div className="relative overflow-hidden">
-                                <img className="flex w-full group/image group-hover/card:scale-110 transition duration-[.2s]" src={product.images[0].picture} alt={product.name}/>
+                                <img className="flex w-full group/image group-hover/card:scale-110 transition duration-[.2s] cursor-pointer" src={product.images[0].picture} alt={product.name}/>
                                 {product.images && product.images.length > 0 && (
                                     <div className="group/variant invisible group-hover/card:visible flex flex-wrap gap-1 justify-center absolute bottom-3 left-0 right-0 transition duration-[.9s]">
                                         {product.images.map((image,index) => (
