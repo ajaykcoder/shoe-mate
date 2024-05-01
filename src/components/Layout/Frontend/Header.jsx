@@ -5,7 +5,7 @@ const Header = () => {
         <div className="w-full py-6 px-5 absolute">
             <div className="w-[1440px] max-w-full mx-auto flex justify-between items-center gap-x-3">
                 <div className="w-40">
-                    <a href="/" className="text-3xl font-semibold text-white transition duration-[.2s]">shoe.mate</a>
+                    <a href="/" className="text-3xl font-semibold text-white hover:text-darkBlue transition duration-[.2s]">shoe.mate</a>
                 </div>
                 <div className="flex items-center gap-x-8">
                     <a className="text-base font-medium text-white transition duration-[.2s]" href="/">Home</a>

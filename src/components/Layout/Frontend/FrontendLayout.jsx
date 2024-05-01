@@ -7,7 +7,7 @@ const FrontendLayout = (props) => {
         <div className="relative">
             <Header/>
                 {props.children}
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     )
 }
