@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const Header = ({page}) => {
     console.log(page);
@@ -6,14 +7,14 @@ const Header = ({page}) => {
         <div className={`w-full py-6 px-5 ${page === `home` ? `absolute` : `relative bg-gradient-to-r to-darkBlue from-blue`}`}>
             <div className="w-[1440px] max-w-full mx-auto flex justify-between items-center gap-x-3">
                 <div className="w-40">
-                    <a href="/" className="text-3xl font-semibold text-white hover:text-darkBlue transition duration-[.2s]">shoe.mate</a>
+                    <Link to={"/"} className="text-3xl font-semibold text-white hover:text-darkBlue transition duration-[.2s]">shoe.mate</Link>
                 </div>
                 <div className="flex items-center gap-x-8">
-                    <a className="text-base font-medium text-white transition duration-[.2s]" href="/">Home</a>
-                    <a className="text-base font-medium text-white transition duration-[.2s]" href="/">About</a>
-                    <a className="text-base font-medium text-white transition duration-[.2s]" href="/products">Products</a>
-                    <a className="text-base font-medium text-white transition duration-[.2s]" href="/">Contact</a>
-                    <a className="text-base font-medium text-white transition duration-[.2s]" href="/">Login</a>
+                    <Link to={"/"} className="text-base font-medium text-white transition duration-[.2s]">Home</Link>
+                    <Link to={"/about-us"} className="text-base font-medium text-white transition duration-[.2s]">About</Link>
+                    <Link to={"/products"} className="text-base font-medium text-white transition duration-[.2s]">Products</Link>
+                    <Link to={"/contact-us"} className="text-base font-medium text-white transition duration-[.2s]">Contact</Link>
+                    <Link to={"/login"} className="text-base font-medium text-white transition duration-[.2s]">Login</Link>
                 </div>
                 <div className="flex items-center gap-x-4 w-40 justify-end">
                     <button className="relative" type="button">
