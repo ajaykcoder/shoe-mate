@@ -1,5 +1,6 @@
 import React from "react";
 import FrontendLayout from "components/Layout/Frontend/FrontendLayout";
+import Fillters from "components/Products/Fillters";
 import product from "db/product";
 
 const Product = () => {
@@ -8,6 +9,7 @@ const Product = () => {
             <div className="w-full py-20 px-5">
                 <div className="w-[1440px] max-w-full mx-auto">
                     <div className="text-darkBlue text-2xl font-semibold text-center mb-10">All Products</div>
+                    <Fillters/>
                     <div className="flex flex-wrap gap-10">
                         {product && product.length > 0 && product.map((product) => (
                             <div key={product.id} className="group/card w-[calc(25%-30px)]">
