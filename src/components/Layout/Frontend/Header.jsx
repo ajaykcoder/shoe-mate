@@ -2,7 +2,6 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 const Header = ({page}) => {
-    console.log(page);
     return (
         <div className={`w-full py-6 px-5 ${page === `home` ? `absolute` : `relative bg-gradient-to-r to-darkBlue from-blue`}`}>
             <div className="w-[1440px] max-w-full mx-auto flex justify-between items-center gap-x-3">

@@ -2,7 +2,6 @@ import React from "react";
 import product from "db/product";
 
 const Products = () => {
-    console.log(product);
     return (
         <div className="w-full py-20 px-5">
             <div className="w-[1440px] max-w-full mx-auto">
