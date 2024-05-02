@@ -11,7 +11,7 @@ const Header = ({page}) => {
                 </div>
                 <div className="flex items-center gap-x-8">
                     <Link to={"/"} className="text-base font-medium text-white transition duration-[.2s]">Home</Link>
-                    <Link to={"/about-us"} className="text-base font-medium text-white transition duration-[.2s]">About</Link>
+                    <Link to={"/about-us"} className="text-base font-medium text-white transition duration-[.2s]">About Us</Link>
                     <Link to={"/products"} className="text-base font-medium text-white transition duration-[.2s]">Products</Link>
                     <Link to={"/contact-us"} className="text-base font-medium text-white transition duration-[.2s]">Contact</Link>
                     <Link to={"/login"} className="text-base font-medium text-white transition duration-[.2s]">Login</Link>
