@@ -5,7 +5,7 @@ import Products from "components/Home/Products";
 
 const Home = () => {
     return (
-        <FrontendLayout>
+        <FrontendLayout page="home">
             <Banner/>
             <Products/>
         </FrontendLayout>

@@ -5,7 +5,7 @@ import Footer from "./Footer";
 const FrontendLayout = (props) => {
     return (
         <div className="relative">
-            <Header/>
+            <Header page={props.page}/>
                 {props.children}
             <Footer/>
         </div>

@@ -1,8 +1,9 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({page}) => {
+    console.log(page);
     return (
-        <div className="w-full py-6 px-5 absolute">
+        <div className={`w-full py-6 px-5 ${page === `home` ? `absolute` : `relative bg-gradient-to-r to-darkBlue from-blue`}`}>
             <div className="w-[1440px] max-w-full mx-auto flex justify-between items-center gap-x-3">
                 <div className="w-40">
                     <a href="/" className="text-3xl font-semibold text-white hover:text-darkBlue transition duration-[.2s]">shoe.mate</a>
@@ -10,6 +11,7 @@ const Header = () => {
                 <div className="flex items-center gap-x-8">
                     <a className="text-base font-medium text-white transition duration-[.2s]" href="/">Home</a>
                     <a className="text-base font-medium text-white transition duration-[.2s]" href="/">About</a>
+                    <a className="text-base font-medium text-white transition duration-[.2s]" href="/products">Products</a>
                     <a className="text-base font-medium text-white transition duration-[.2s]" href="/">Contact</a>
                     <a className="text-base font-medium text-white transition duration-[.2s]" href="/">Login</a>
                 </div>
