@@ -14,7 +14,7 @@ const Banner = () => {
                     <a href="/" className="text-base font-medium bg-darkBlue text-white h-10 px-6 rounded-md flex items-center justify-center w-max cursor-pointer transition duration-[.2s] mt-4">Shop Now</a>
                 </div>
                 <div className="flex-1">
-                    <img className="flex pt-32" src="/assets/images/banner.png" alt="Banner"/>
+                    <img className="flex" src="/assets/images/banner2.png" alt="Banner"/>
                 </div>
             </div>
         </div>
