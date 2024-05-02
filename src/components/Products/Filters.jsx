@@ -1,6 +1,6 @@
 import React from "react";
 
-const Fillters = () => {
+const Filters = () => {
     return (
         <div className="flex gap-10 mb-10">
             <div className="w-full relative">
@@ -48,4 +48,4 @@ const Fillters = () => {
         </div>
     );
 }
-export default Fillters;
+export default Filters;
