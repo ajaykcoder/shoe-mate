@@ -13,7 +13,7 @@ const Header = ({page}) => {
                     <Link to={"/"} className="text-base font-medium text-white transition duration-[.2s]">Home</Link>
                     <Link to={"/about-us"} className="text-base font-medium text-white transition duration-[.2s]">About Us</Link>
                     <Link to={"/products"} className="text-base font-medium text-white transition duration-[.2s]">Products</Link>
-                    <Link to={"/contact-us"} className="text-base font-medium text-white transition duration-[.2s]">Contact</Link>
+                    <Link to={"/contact-us"} className="text-base font-medium text-white transition duration-[.2s]">Contact Us</Link>
                     <Link to={"/login"} className="text-base font-medium text-white transition duration-[.2s]">Login</Link>
                 </div>
                 <div className="flex items-center gap-x-4 w-40 justify-end">
