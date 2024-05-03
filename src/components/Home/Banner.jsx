@@ -1,4 +1,6 @@
 import React from "react";
+import {LazyLoadImage} from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Banner = () => {
     return (
@@ -14,7 +16,7 @@ const Banner = () => {
                     <a href="/" className="text-base font-medium bg-darkBlue text-white h-10 px-6 rounded-md flex items-center justify-center w-max cursor-pointer transition duration-[.2s] mt-4">Shop Now</a>
                 </div>
                 <div className="flex-1">
-                    <img className="flex" src="/assets/images/banner2.png" alt="Banner"/>
+                    <LazyLoadImage className="flex" src="/assets/images/banner2.png" alt="Banner" effect="blur"/>
                 </div>
             </div>
         </div>
