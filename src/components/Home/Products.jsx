@@ -1,6 +1,7 @@
 import React from "react";
 import product from "db/product";
 import {LazyLoadImage} from "react-lazy-load-image-component";
+import Quantity from "components/Products/Quantity";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Products = () => {
@@ -12,7 +13,7 @@ const Products = () => {
                     {product && product.length > 0 && product.map((product) => (
                         <div key={product.id} className="group/card w-[calc(25%-30px)]">
                             <div className="relative overflow-hidden">
-                                <img className="flex w-full group/image group-hover/card:scale-110 transition duration-[.2s] cursor-pointer" src={product.images[0].picture} alt={product.name}/>
+                                <img className="flex w-full group/image group-hover/card:scale-110 transition duration-[.2s] cursor-pointer select-none" src={product.images[0].picture} alt={product.name}/>
                                 {product.images && product.images.length > 0 && (
                                     <div className="group/variant invisible group-hover/card:visible flex flex-wrap gap-1 justify-center absolute bottom-3 left-0 right-0 transition duration-[.9s]">
                                         {product.images.map((image,index) => (
@@ -30,9 +31,9 @@ const Products = () => {
                                 <div>
                                     <div className="text-base text-nowrap text-ellipsis overflow-hidden cursor-pointer">{product.name}</div>
                                     <div>₹{product.price}</div>
-                                    <div className="flex items-center justify-center gap-x-2">
-                                        <button className="text-base font-medium bg-darkBlue hover:bg-blue text-white h-10 px-4 rounded-md flex items-center justify-center w-max cursor-pointer transition duration-[.2s] mt-3">Add to Cart</button>
-                                        <button className="text-base font-medium bg-darkBlue hover:bg-blue text-white h-10 px-4 rounded-md flex items-center justify-center w-max cursor-pointer transition duration-[.2s] mt-3">View</button>
+                                    <div className="flex items-center justify-center gap-x-2 mt-4">
+                                        <Quantity product={product}/>
+                                        <button className="text-base font-medium bg-darkBlue hover:bg-blue text-white h-10 px-4 rounded-md flex items-center justify-center w-max cursor-pointer transition duration-[.2s] select-none">Add to Cart</button>
                                     </div>
                                 </div>
                             </div>
