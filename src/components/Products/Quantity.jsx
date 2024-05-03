@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 
 const Quantity = ({product}) => {
-    const [quantities, setQuantities] = useState({});
+    const [quantities, setQuantities] = useState({[product.id]: 1 });
     const handleQuantity = (productId, type) => {
         const currentQuantity = quantities[productId] || 0;
         let newQuantity;
