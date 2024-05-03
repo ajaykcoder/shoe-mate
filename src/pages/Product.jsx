@@ -1,7 +1,9 @@
 import React from "react";
 import FrontendLayout from "components/Layout/Frontend/FrontendLayout";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 import Filters from "components/Products/Filters";
 import product from "db/product";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Product = () => {
     return (
@@ -18,8 +20,8 @@ const Product = () => {
                                     {product.images && product.images.length > 0 && (
                                         <div className="group/variant invisible group-hover/card:visible flex flex-wrap gap-1 justify-center absolute bottom-3 left-0 right-0 transition duration-[.9s]">
                                             {product.images.map((image,index) => (
-                                                <button key={index} className="cursor-pointer rounded-md overflow-hidden border border-border hover:border-blue">
-                                                    <img className="flex w-10 h-10 object-cover" src={image.picture} alt={product.name}/>
+                                                <button key={index} className="flex cursor-pointer rounded-md overflow-hidden border border-border hover:border-blue">
+                                                    <LazyLoadImage className="flex w-10 h-10 object-cover" src={image.picture} alt={product.name} effect="blur"/>
                                                 </button>
                                             ))}
                                         </div>
