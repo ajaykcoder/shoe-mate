@@ -5,6 +5,7 @@ import Filters from "components/Products/Filters";
 import productData from "db/product";
 import Quantity from "components/Products/Quantity";
 import FavoriteButton from "components/Products/FavoriteButton";
+import StarRating from "components/Products/StarRating";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Product = () => {
@@ -39,7 +40,10 @@ const Product = () => {
                                 <div className="p-5 border-x border-b border-borderLight">
                                     <div>
                                         <div className="text-base text-nowrap text-ellipsis overflow-hidden cursor-pointer">{product.name}</div>
-                                        <div>₹{product.price}</div>
+                                        <div className="flex gap-x-2 items-center justify-between mt-2">
+                                            <div>₹{product.price}</div>
+                                            <StarRating rating={product.rating}/>
+                                        </div>
                                         <div className="flex items-center justify-center gap-x-2 mt-4">
                                             <Quantity product={product} />
                                             <button className="text-base font-medium bg-darkBlue hover:bg-blue text-white h-10 px-4 rounded-md flex items-center justify-center w-max cursor-pointer transition duration-[.2s] select-none">Add to Cart</button>

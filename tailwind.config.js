@@ -13,7 +13,8 @@ module.exports = {
             "text" : "#334155",
             "white" : "#FFFFFF",
             "border" : "#C6C6C6",
-            "borderLight" : "#ECEEEF"
+            "borderLight" : "#ECEEEF",
+            "yellow" : "#FFC207"
         },
         screens: {
             "full": {"max": "1580px"},
