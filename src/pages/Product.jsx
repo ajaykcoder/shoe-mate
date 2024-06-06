@@ -15,6 +15,10 @@ const Product = () => {
             prevProducts.map((product) => product.id === productId ? { ...product, isFavorite: !product.isFavorite } : product )
         );
     };
+    const handleClick = (slug) => {
+        window.location = `/product/${slug}`;
+    };
+    console.log(handleClick);
     return (
         <FrontendLayout page="products">
             <div className="w-full py-20 px-5">
@@ -25,7 +29,7 @@ const Product = () => {
                         {products && products.length > 0 && products.map((product) => (
                             <div key={product.id} className="group/card w-[calc(25%-30px)]">
                                 <div className="relative overflow-hidden">
-                                    <img className="flex w-full group/image group-hover/card:scale-110 transition duration-[.2s] cursor-pointer select-none" src={product.images[0].picture} alt={product.name}/>
+                                    <img onClick={() => handleClick(product.slug)} className="flex w-full group/image group-hover/card:scale-110 transition duration-[.2s] cursor-pointer select-none" src={product.images[0].picture} alt={product.name}/>
                                     {product.images && product.images.length > 0 && (
                                         <div className="group/variant invisible group-hover/card:visible flex flex-wrap gap-1 justify-center absolute bottom-3 left-0 right-0 transition duration-[.9s]">
                                             {product.images.map((image, index) => (
@@ -39,7 +43,7 @@ const Product = () => {
                                 </div>
                                 <div className="p-5 border-x border-b border-borderLight">
                                     <div>
-                                        <div className="text-base text-nowrap text-ellipsis overflow-hidden cursor-pointer">{product.name}</div>
+                                        <div onClick={() => handleClick(product.slug)} className="text-base text-nowrap text-ellipsis overflow-hidden cursor-pointer">{product.name}</div>
                                         <div className="flex gap-x-2 items-center justify-between mt-2">
                                             <div>₹{product.price}</div>
                                             <StarRating rating={product.rating}/>

@@ -17,6 +17,11 @@ const StarRating = ({ rating }) => {
         }
         return <span key={index}>{starIcon}</span>;
     });
-    return <div className="flex gap-x-1">{ratingStars}</div>;
+    return (
+        <div className="flex items-center gap-x-1">
+            <div className="flex gap-x-1">{ratingStars}</div>
+            <div className="text-text text-xs mt-1">(22)</div>
+        </div>
+    );
 };
 export default StarRating;
